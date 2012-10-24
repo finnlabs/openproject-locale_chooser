@@ -1,0 +1,10 @@
+.locales_chooser input {
+  overflow: visible;
+  width: auto;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #E20074;
+  font-weight: bold;
+  -moz-user-select: text;
+}
