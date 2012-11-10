@@ -124,7 +124,7 @@ var InputBackup = (function ($) {
   get_saved_inputs = function () {
     var inputs = $('form').find('input, textarea, select');
 
-    inputs = inputs.not('input[type=hidden], input[type=submit]');
+    inputs = inputs.not('input[type=hidden], input[type=submit], .locales_chooser_ignore');
 
     return inputs;
   };
