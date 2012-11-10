@@ -1,6 +1,6 @@
 require 'redmine'
 
-Redmine::Plugin.register :chiliproject_locale_chooser do
+Redmine::Plugin.register :locale_chooser do
   name 'Chiliproject Locale Chooser plugin'
   author 'Author name'
   description 'This is a plugin for ChiliProject'
