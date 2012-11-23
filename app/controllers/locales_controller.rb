@@ -3,8 +3,10 @@ class LocalesController < ApplicationController
 
   skip_before_filter :check_if_login_required
 
+  include LocaleChooser::Manual
+
   def update
-    session[:locale] = params[:locale] if Setting.available_languages.include?(params[:locale])
+    set_manual_locale(params[:locale])
     redirect_to back_url
   end
 

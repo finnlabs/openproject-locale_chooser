@@ -15,4 +15,8 @@ module LocalesHelper
       end
     end
   end
+
+  def manual_locale
+    session[:locale]
+  end
 end
