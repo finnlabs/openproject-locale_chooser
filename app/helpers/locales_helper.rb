@@ -1,4 +1,6 @@
 module LocalesHelper
+  include LocaleChooser::Manual
+
   def locales_chooser
     # might cause duplicate loading of stylesheet if called more than once
     content_for :header_tags do
@@ -14,9 +16,5 @@ module LocalesHelper
         hidden_field_tag(:back_url, request.request_uri)
       end
     end
-  end
-
-  def manual_locale
-    session[:locale]
   end
 end
