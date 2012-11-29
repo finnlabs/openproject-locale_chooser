@@ -6,6 +6,19 @@ describe LocalesController do
                                                      :action => "update" } }
   end
 
+  #Beginnin with rails 3.2 there is a :null_store for effectively disabling caching in test environment
+  def clear_settings_cache
+    Rails.cache.clear
+  end
+
+  # this is the base method for get, post, etc.
+  def process(*args)
+    clear_settings_cache
+    result = super
+    clear_settings_cache
+    result
+  end
+
   describe :put do
     let(:params) { { "locale" => locale } }
     let(:action) { put :update, params }
