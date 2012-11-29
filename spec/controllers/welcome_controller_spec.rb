@@ -4,11 +4,11 @@ describe WelcomeController do
 
   before do
     # patch the controller for the test
-    @controller.class.send(:include, LocaleChooser::Manual)
+    @controller.class.send(:include, LocaleChooser::ControllerPatch)
   end
 
   describe :index do
-    describe "WITH a locale specified in the settings" do
+    describe "WITH a locale specified in the session" do
       before do
         Setting.available_languages = [:en, :de]
 
