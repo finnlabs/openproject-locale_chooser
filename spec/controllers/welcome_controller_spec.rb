@@ -4,7 +4,7 @@ describe WelcomeController do
 
   before do
     # patch the controller for the test
-    @controller.class.send(:include, LocaleChooser::ControllerPatch)
+    @controller.class.send(:include, LocaleChooser::ControllerPatch) unless @controller.class.included_modules.include?(LocaleChooser::ControllerPatch)
   end
 
   describe :index do
