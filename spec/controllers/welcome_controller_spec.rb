@@ -1,10 +1,10 @@
-require File.join(File.dirname(__FILE__), "..", "spec_helper.rb")
+require File.dirname(__FILE__) + '/../spec_helper'
 
 describe WelcomeController do
 
   before do
     # patch the controller for the test
-    @controller.class.send(:include, LocaleChooser::ControllerPatch) unless @controller.class.included_modules.include?(LocaleChooser::ControllerPatch)
+    @controller.class.send(:include, OpenProject::LocaleChooser::ControllerPatch) unless @controller.class.included_modules.include?(OpenProject::LocaleChooser::ControllerPatch)
   end
 
   describe :index do

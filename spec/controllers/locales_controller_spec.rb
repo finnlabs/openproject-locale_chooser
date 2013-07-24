@@ -1,8 +1,8 @@
-require File.join(File.dirname(__FILE__), "..", "spec_helper.rb")
+require File.dirname(__FILE__) + '/../spec_helper'
 
 describe LocalesController do
 
-  #Beginnin with rails 3.2 there is a :null_store for effectively disabling caching in test environment
+  # #Beginnin with rails 3.2 there is a :null_store for effectively disabling caching in test environment
   def clear_settings_cache
     Rails.cache.clear
   end
