@@ -1,3 +1,0 @@
-class ChosenLocaleSelector < ApplicationController
-
-end
