@@ -1,10 +1,6 @@
 require File.join(File.dirname(__FILE__), "..", "spec_helper.rb")
 
 describe LocalesController do
-  describe :routes do
-    it { params_from(:put, "/my/locale").should == { :controller => "locales",
-                                                     :action => "update" } }
-  end
 
   #Beginnin with rails 3.2 there is a :null_store for effectively disabling caching in test environment
   def clear_settings_cache
