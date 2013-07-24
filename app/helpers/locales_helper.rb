@@ -1,11 +1,11 @@
 module LocalesHelper
-  include LocaleChooser::Manual
+  include OpenProject::LocaleChooser::Manual
 
   def locales_chooser
     # might cause duplicate loading of stylesheet if called more than once
     content_for :header_tags do
-      [stylesheet_link_tag("locale_chooser", :plugin => "locale_chooser"),
-       javascript_include_tag("backup_input", :plugin => "locale_chooser")].join("")
+      [stylesheet_link_tag("locale_chooser/locale_chooser"),
+       javascript_include_tag("locale_chooser/backup_input")].join("")
     end
 
     content_tag :div, :class => 'locales_chooser' do

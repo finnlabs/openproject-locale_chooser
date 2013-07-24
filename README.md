@@ -1,3 +1,4 @@
-= locale_chooser
+openproject-locale_chooser
+=========================
 
 Description goes here

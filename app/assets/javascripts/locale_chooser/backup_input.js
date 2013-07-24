@@ -1,5 +1,3 @@
-/*globals jQuery, console, document */
-
 var InputBackup = (function ($) {
   var backup_exists,
       restore,
