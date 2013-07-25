@@ -1,5 +1,5 @@
 module OpenProject
   module LocaleChooser
-    VERSION = "1.1.4"
+    VERSION = "2.0.0pre1"
   end
 end
