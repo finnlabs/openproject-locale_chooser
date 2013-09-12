@@ -45,16 +45,16 @@ describe LocalesController do
     end
 
     describe "WITH a back_url" do
-      let(:back_url) { issues_url }
+      let(:back_url) { work_packages_url }
       let(:locale) { active_locale }
 
       before do
-        params[:back_url] = issues_url
+        params[:back_url] = work_packages_url
 
         action
       end
 
-      it { response.should redirect_to issues_url }
+      it { response.should redirect_to work_packages_url }
     end
   end
 end
