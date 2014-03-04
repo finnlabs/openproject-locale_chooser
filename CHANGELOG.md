@@ -1,5 +1,6 @@
 # Changelog
 
+## 2.0.0
 ## 2.0.0.pre2
 
 * fixed controller spec for issue 2 work package renaming
