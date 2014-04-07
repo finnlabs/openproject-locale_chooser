@@ -21,7 +21,8 @@ module OpenProject::LocaleChooser
     end
 
     initializer 'locale_chooser.precompile_assets' do
-      Rails.application.config.assets.precompile += %w(locale_chooser.css backup_input.js)
+      Rails.application.config.assets.precompile += %w(locale_chooser/locale_chooser.css
+        locale_chooser/backup_input.js)
     end
 
     initializer 'locale_chooser.register_test_paths' do |app|
