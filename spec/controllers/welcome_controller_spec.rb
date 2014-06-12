@@ -17,7 +17,7 @@ describe WelcomeController do
         get :index
       end
 
-      it { ::I18n.locale.should == :de }
+      it { expect(::I18n.locale).to eq(:de) }
     end
   end
 
