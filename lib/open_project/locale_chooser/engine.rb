@@ -16,7 +16,7 @@ module OpenProject::LocaleChooser
         version spec.version
         url 'https://www.openproject.org/projects/locale-chooser'
 
-        requires_openproject ">= 3.0.0pre8"
+        requires_openproject ">= 4.0.0"
       end
     end
 
