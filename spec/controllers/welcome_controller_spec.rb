@@ -10,7 +10,7 @@ describe WelcomeController do
   describe :index do
     describe "WITH a locale specified in the session" do
       before do
-        Setting.available_languages = [:en, :de]
+        allow(Setting).to receive(:available_languages).and_return([:en, :de])
 
         session[:locale] = "de"
 

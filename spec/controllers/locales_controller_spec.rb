@@ -21,7 +21,7 @@ describe LocalesController do
     let(:active_locale) { "en" }
 
     before do
-      Setting.available_languages = [active_locale]
+      allow(Setting).to receive(:available_languages).and_return([active_locale])
     end
 
     describe "WITH an active language" do
