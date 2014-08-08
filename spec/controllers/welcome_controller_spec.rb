@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe WelcomeController do
+describe WelcomeController, :type => :controller do
 
   before do
     # patch the controller for the test
@@ -17,7 +17,7 @@ describe WelcomeController do
         get :index
       end
 
-      it { ::I18n.locale.should == :de }
+      it { expect(::I18n.locale).to eq(:de) }
     end
   end
 

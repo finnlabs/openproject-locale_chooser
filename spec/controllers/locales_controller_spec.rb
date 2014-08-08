@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe LocalesController do
+describe LocalesController, :type => :controller do
 
   # #Beginnin with rails 3.2 there is a :null_store for effectively disabling caching in test environment
   def clear_settings_cache
@@ -31,7 +31,7 @@ describe LocalesController do
         action
       end
 
-      it { session[:locale].should == locale }
+      it { expect(session[:locale]).to eq(locale) }
     end
 
     describe "WITH a non active/unknown language" do
@@ -41,7 +41,7 @@ describe LocalesController do
         action
       end
 
-      it { session[:locale].should be_nil }
+      it { expect(session[:locale]).to be_nil }
     end
 
     describe "WITH a back_url" do
@@ -54,7 +54,7 @@ describe LocalesController do
         action
       end
 
-      it { response.should redirect_to work_packages_url }
+      it { expect(response).to redirect_to work_packages_url }
     end
   end
 end
