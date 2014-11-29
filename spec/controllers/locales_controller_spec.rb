@@ -16,15 +16,15 @@ describe LocalesController, type: :controller do
   end
 
   describe :put do
-    let(:params) { { "locale" => locale } }
+    let(:params) { { 'locale' => locale } }
     let(:action) { put :update, params }
-    let(:active_locale) { "en" }
+    let(:active_locale) { 'en' }
 
     before do
       allow(Setting).to receive(:available_languages).and_return([active_locale])
     end
 
-    describe "WITH an active language" do
+    describe 'WITH an active language' do
       let(:locale) { active_locale }
 
       before do
@@ -34,8 +34,8 @@ describe LocalesController, type: :controller do
       it { expect(session[:locale]).to eq(locale) }
     end
 
-    describe "WITH a non active/unknown language" do
-      let(:locale) { "wk" }
+    describe 'WITH a non active/unknown language' do
+      let(:locale) { 'wk' }
 
       before do
         action
@@ -44,7 +44,7 @@ describe LocalesController, type: :controller do
       it { expect(session[:locale]).to be_nil }
     end
 
-    describe "WITH a back_url" do
+    describe 'WITH a back_url' do
       let(:back_url) { work_packages_url }
       let(:locale) { active_locale }
 
