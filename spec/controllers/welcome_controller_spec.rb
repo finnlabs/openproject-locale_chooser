@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe WelcomeController, :type => :controller do
+describe WelcomeController, type: :controller do
 
   before do
     # patch the controller for the test

@@ -35,7 +35,7 @@ module OpenProject::LocaleChooser
       app.config.paths['config/routes'].unshift File.join(File.dirname(__FILE__), "..", "..", "..", "config", "routes.rb")
     end
 
-    initializer "remove_duplicate_locale_chooser_routes", :after => "add_routing_paths" do |app|
+    initializer "remove_duplicate_locale_chooser_routes", after: "add_routing_paths" do |app|
       # removes duplicate entry from app.routes_reloader
       # As we prepend the plugin's routes to the load_path up front and rails
       # adds all engines' config/routes.rb later, we have double loaded the routes
