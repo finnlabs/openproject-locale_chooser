@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-describe WelcomeController, :type => :controller do
+describe WelcomeController, type: :controller do
 
   before do
     # patch the controller for the test
@@ -8,11 +8,11 @@ describe WelcomeController, :type => :controller do
   end
 
   describe :index do
-    describe "WITH a locale specified in the session" do
+    describe 'WITH a locale specified in the session' do
       before do
         allow(Setting).to receive(:available_languages).and_return([:en, :de])
 
-        session[:locale] = "de"
+        session[:locale] = 'de'
 
         get :index
       end
