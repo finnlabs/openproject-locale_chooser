@@ -15,7 +15,7 @@ describe LocalesController, :type => :controller do
     result
   end
 
-  describe :put do
+  describe '#put' do
     let(:params) { { "locale" => locale } }
     let(:action) { put :update, params }
     let(:active_locale) { "en" }

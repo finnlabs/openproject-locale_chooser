@@ -7,7 +7,7 @@ describe WelcomeController, :type => :controller do
     @controller.class.send(:include, OpenProject::LocaleChooser::ControllerPatch) unless @controller.class.included_modules.include?(OpenProject::LocaleChooser::ControllerPatch)
   end
 
-  describe :index do
+  describe '#index' do
     describe "WITH a locale specified in the session" do
       before do
         allow(Setting).to receive(:available_languages).and_return([:en, :de])
