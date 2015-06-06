@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + [ "README.md", "CHANGELOG.md" ]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.9"
+  s.add_dependency 'rails', '~> 4.0.13'
 
   s.add_development_dependency "factory_girl_rails", "~> 4.0"
 end
