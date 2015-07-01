@@ -10,8 +10,8 @@ module LocalesHelper
 
     content_tag :div, :class => 'locales_chooser' do
       form_tag my_locale_url, :method => :put do
-        Setting.available_languages.collect do |l|
-          styled_button_tag l, :name => 'locale'
+        Setting.available_languages.collect do |language|
+          styled_button_tag language, name: 'locale', value: language
         end.join(" ").html_safe +
         hidden_field_tag(:back_url, request.url)
       end
