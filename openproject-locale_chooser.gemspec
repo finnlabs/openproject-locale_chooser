@@ -7,9 +7,9 @@ require "open_project/locale_chooser/version"
 Gem::Specification.new do |s|
   s.name = "openproject-locale_chooser"
   s.version = OpenProject::LocaleChooser::VERSION
-  s.authors = ["Finn GmbH"]
-  s.email = ["info@finn.de"]
-  s.homepage = "http://www.finn.de/"
+  s.authors = ["OpenProject GmbH"]
+  s.email = ["info@openproject.com"]
+  s.homepage = "http://www.openproject.com/"
   s.summary = "OpenProject plugin providing language switching functionality for other plugins."
   s.description = "OpenProject plugin providing language switching functionality for other plugins."
 
