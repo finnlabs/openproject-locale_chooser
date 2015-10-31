@@ -12,7 +12,6 @@ module OpenProject
             set_language_if_valid(manual_locale) if manual_locale
           end
           alias_method_chain :set_localization, :session
-
         end
       end
     end

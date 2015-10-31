@@ -1,6 +1,5 @@
 class LocalesController < ApplicationController
-
-  skip_before_filter :check_if_login_required
+  skip_before_action :check_if_login_required
 
   include OpenProject::LocaleChooser::Manual
 
@@ -13,7 +12,7 @@ class LocalesController < ApplicationController
 
   def back_url
     params[:back_url].present? ?
-      CGI::unescape(params[:back_url]) :
+      CGI.unescape(params[:back_url]) :
       home_url
   end
 end
