@@ -25,10 +25,6 @@ module OpenProject::LocaleChooser
         locale_chooser/backup_input.js)
     end
 
-    initializer 'locale_chooser.register_test_paths' do |app|
-      app.config.plugins_to_test_paths << self.root
-    end
-
     config.before_configuration do |app|
       # This is required for the routes to be loaded first
       # as the routes should be prepended so they take precedence over the core.
