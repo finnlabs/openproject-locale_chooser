@@ -1,6 +1,5 @@
 class LocalesController < ApplicationController
-
-  skip_before_filter :check_if_login_required
+  skip_before_action :check_if_login_required
 
   include OpenProject::LocaleChooser::Manual
 
