@@ -6,13 +6,14 @@ module OpenProject
           helper :locales
 
           include Manual
+          prepend InstanceMethods
+        end
+      end
 
-          def set_localization_with_session
-            set_localization_without_session
-            set_language_if_valid(manual_locale) if manual_locale
-          end
-          alias_method_chain :set_localization, :session
-
+      module InstanceMethods
+        def set_localization
+          super
+          set_language_if_valid(manual_locale) if manual_locale
         end
       end
     end
