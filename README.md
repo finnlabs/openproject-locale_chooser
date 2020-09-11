@@ -1,4 +1,1 @@
-openproject-locale_chooser
-=========================
-
-Description goes here
+:warning: This repository is archived and read-only for historic versions.
